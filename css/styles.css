@@ -1,0 +1,10 @@
+html, body, .container, #mapContainer {
+  height: 100%;
+  margin: 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+#mapContainer {
+  flex-grow: 1;
+}
