@@ -15,5 +15,5 @@ var geocoder = new MapboxGeocoder({ // Initialize the geocoder
 
 // Add the geocoder to the map
 map.addControl(geocoder);
-
+//add nav control
 map.addControl(new mapboxgl.NavigationControl())
