@@ -6,3 +6,14 @@ var map = new mapboxgl.Map({
   center: [-73.984771, 40.727157], // starting position [lng, lat]
   zoom: 11 // starting zoom
 });
+
+var geocoder = new MapboxGeocoder({ // Initialize the geocoder
+  accessToken: mapboxgl.accessToken, // Set the access token
+  mapboxgl: mapboxgl, // Set the mapbox-gl instance
+  marker: true, // Do  use the default marker style
+});
+
+// Add the geocoder to the map
+map.addControl(geocoder);
+
+map.addControl(new mapboxgl.NavigationControl())

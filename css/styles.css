@@ -1,8 +1,20 @@
-html, body, .container, #mapContainer {
+html, body, .container, .sidebar, #mapContainer {
   height: 100%;
   margin: 0;
   background-color: white;
   overflow: hidden;
+}
+
+.container {
+  display: flex;
+  min-height: auto;
+}
+
+.sidebar{
+  height: 100%;
+  background: steelblue;
+  width: 400px;
+  position: relative;
 }
 
 #mapContainer {
