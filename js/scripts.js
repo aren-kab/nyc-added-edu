@@ -46,7 +46,7 @@ years.forEach(function(id) {
 // Filter by Programs
 
 //Let's add the college json
-$.getJSON('./data/colleges_json.json', function(colleges) {
+$.getJSON('./data/colleges.json', function(colleges) {
     console.log(colleges)
 
     colleges.forEach(function(college) {
@@ -97,7 +97,7 @@ $.getJSON('./data/colleges_json.json', function(colleges) {
   });
 })
 
-
+//
 // document.getElementById("4-Year").addEventListener('change', function(e) {
 //   if (el.target.checked === false) {
 //     $('*[id*=4-Year]').each(function() {
