@@ -26,7 +26,7 @@ var filterGroup = document.getElementById('filter-group');
 
 
 //Filter by program type
-var years = ['4-year','2-year','Graduate'];
+var years = ['Bach','Assoc','Graduate'];
 
 // Add checkbox and label elements for the layer.
 years.forEach(function(id) {
@@ -51,7 +51,8 @@ $.getJSON('./data/colleges.json', function(colleges) {
 
     colleges.forEach(function(college) {
       console.log(college.name, college.address,college.url,college.institution,college.type)
-      var layerID = college.type
+      var symbol = college.type;
+      var layerID = 'TP' + symbol;
 
       //configurepopup
       var html = `
@@ -64,70 +65,70 @@ $.getJSON('./data/colleges.json', function(colleges) {
             </div>
         `
     //color if public statement
-  if (college.institution == 'Public') {
-    var el = document.createElement('div');
-    el.className = 'marker';
-    el.id = 'TP' + college.type;
-    el.style.backgroundImage ='url("images/tennis_marker.svg")';
-    el.style.width = '16px';
-    el.style.height = '22px';
+        if (college.institution == 'Public') {
+          var el = document.createElement('div');
+            el.className = 'marker';
+            el.id = 'TP:' + college.type;
+            el.style.backgroundImage ='url("images/tennis_marker.svg")';
+            el.style.width = '16px';
+            el.style.height = '22px';
 
-    new mapboxgl.Marker(el,{
-       anchor: "bottom",
-      })
-      .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-42] }).setHTML(html)) // add popup
-      .setLngLat([college.lon, college.lat])
-      .addTo(map);
-  }
-  else{
-      var el = document.createElement('div');
-      el.className = 'marker';
-      el.id = 'TP:' + college.type;
-      el.style.backgroundImage ='url("images/tennis_marker_yellow.svg")';
-      el.style.width = '16px';
-      el.style.height = '22px';
+        new mapboxgl.Marker(el,{
+           anchor: "bottom",
+          })
+          .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-42] }).setHTML(html)) // add popup
+          .setLngLat([college.lon, college.lat])
+          .addTo(map);
+        }
+        else{
+            var el = document.createElement('div');
+              el.className = 'marker';
+              el.id = 'TP:' + college.type;
+              el.style.backgroundImage ='url("images/tennis_marker_yellow.svg")';
+              el.style.width = '16px';
+              el.style.height = '22px';
 
-    new mapboxgl.Marker(el,{
-       anchor: "bottom"
-      })
-    .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-42] }).setHTML(html)) // add popup
-    .setLngLat([college.lon, college.lat])
-    .addTo(map);
-    }
-  });
+          new mapboxgl.Marker(el,{
+             anchor: "bottom"
+            })
+          .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-42] }).setHTML(html)) // add popup
+          .setLngLat([college.lon, college.lat])
+          .addTo(map);
+          }
+    });
 })
 
-//
-// document.getElementById("4-Year").addEventListener('change', function(e) {
-//   if (el.target.checked === false) {
-//     $('*[id*=4-Year]').each(function() {
-//       $(this).hide();});
-//   } else {
-//     $('*[id*=4-Year]').each(function() {
-//       $(this).show();});
-//   }
-// })
-//
-// document.getElementById("2-Year").addEventListener('change', function(e) {
-//   if (el.target.checked === false) {
-//     $('*[id*=2-Year]').each(function() {
-//       $(this).hide();});
-//   } else {
-//     $('*[id*=2-Year]').each(function() {
-//       $(this).show();});
-//   }
-// })
-//
-// document.getElementById("Graduate").addEventListener('change', function(e) {
-//   if (e.target.checked === false) {
-//     $('*[id*=Graduate]').each(function() {
-//       $(this).hide();});
-//   } else {
-//     $('*[id*=Graduate]').each(function() {
-//       $(this).show();});
-//   }
-// })
-//
+
+document.getElementById('Bach').addEventListener('change', function(e) {
+  if (el.target.checked === false) {
+    $('*[id*=4-Year]').each(function() {
+      $(this).hide();});
+  } else {
+    $('*[id*=4-Year]').each(function() {
+      $(this).show();});
+  }
+})
+
+document.getElementById("Assoc").addEventListener('change', function(e) {
+  if (el.target.checked === false) {
+    $('*[id*=2-Year]').each(function() {
+      $(this).hide();});
+  } else {
+    $('*[id*=2-Year]').each(function() {
+      $(this).show();});
+  }
+})
+
+document.getElementById("Graduate").addEventListener('change', function(e) {
+  if (e.target.checked === false) {
+    $('*[id*=Graduate]').each(function() {
+      $(this).hide();});
+  } else {
+    $('*[id*=Graduate]').each(function() {
+      $(this).show();});
+  }
+})
+
 
 // map.on('load', function () {
 // // Add an image to use as a custom marker
