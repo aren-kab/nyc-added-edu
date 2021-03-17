@@ -46,7 +46,7 @@ years.forEach(function(id) {
 // Filter by Programs
 
 //Let's add the college json
-$.getJSON('data/colleges_json.json', function(colleges) {
+$.getJSON('./data/colleges_json.json', function(colleges) {
     console.log(colleges)
 
     colleges.forEach(function(college) {
