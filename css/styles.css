@@ -61,16 +61,13 @@ html, body, .container, .sidebar, #mapContainer {
   text-align: center;
   font-size: 17.5px;
 }
-#mapContainer {
-  flex-grow: 1;
-}
 
 .filter-group {
-  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font: 12px/20px ;
   font-weight: 600;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 80px;
+  left: 10px;
   z-index: 1;
   border-radius: 3px;
   width: 120px;
@@ -111,6 +108,10 @@ html, body, .container, .sidebar, #mapContainer {
 .filter-group input[type='checkbox']:checked + label:before {
   content: '✔';
   margin-right: 5px;
+}
+
+#mapContainer {
+  flex-grow: 1;
 }
 
 .marker {
