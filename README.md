@@ -1,2 +1,2 @@
 # nyc-outdoor-spaces-youth
- A map showing the intersection of economic status, outdoor school spaces and play spaces
+ A map showing details about Colleges and Universities in the New York City area.
