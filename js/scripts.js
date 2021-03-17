@@ -98,35 +98,35 @@ $.getJSON('./data/colleges_json.json', function(colleges) {
 })
 
 
-document.getElementById("4-Year").addEventListener('change', function(e) {
-  if (el.target.checked === false) {
-    $('*[id*=4-Year]').each(function() {
-      $(this).hide();});
-  } else {
-    $('*[id*=4-Year]').each(function() {
-      $(this).show();});
-  }
-})
-
-document.getElementById("2-Year").addEventListener('change', function(e) {
-  if (el.target.checked === false) {
-    $('*[id*=2-Year]').each(function() {
-      $(this).hide();});
-  } else {
-    $('*[id*=2-Year]').each(function() {
-      $(this).show();});
-  }
-})
-
-document.getElementById("Graduate").addEventListener('change', function(e) {
-  if (e.target.checked === false) {
-    $('*[id*=Graduate]').each(function() {
-      $(this).hide();});
-  } else {
-    $('*[id*=Graduate]').each(function() {
-      $(this).show();});
-  }
-})
+// document.getElementById("4-Year").addEventListener('change', function(e) {
+//   if (el.target.checked === false) {
+//     $('*[id*=4-Year]').each(function() {
+//       $(this).hide();});
+//   } else {
+//     $('*[id*=4-Year]').each(function() {
+//       $(this).show();});
+//   }
+// })
+//
+// document.getElementById("2-Year").addEventListener('change', function(e) {
+//   if (el.target.checked === false) {
+//     $('*[id*=2-Year]').each(function() {
+//       $(this).hide();});
+//   } else {
+//     $('*[id*=2-Year]').each(function() {
+//       $(this).show();});
+//   }
+// })
+//
+// document.getElementById("Graduate").addEventListener('change', function(e) {
+//   if (e.target.checked === false) {
+//     $('*[id*=Graduate]').each(function() {
+//       $(this).hide();});
+//   } else {
+//     $('*[id*=Graduate]').each(function() {
+//       $(this).show();});
+//   }
+// })
 //
 
 // map.on('load', function () {
