@@ -26,12 +26,11 @@ var filterGroup = document.getElementById('filter-group');
 
 
 //Filter by program type
-var years = ['Bach','Assoc','Graduate'];
+var years = ['Bachelors','Community','Graduate'];
 
 // Add checkbox and label elements for the layer.
 years.forEach(function(id) {
   var input = document.createElement('input');
-    input.className = 'active';
     input.type = 'checkbox';
     input.id = id;
     input.checked = true;
@@ -51,8 +50,6 @@ $.getJSON('./data/colleges.json', function(colleges) {
 
     colleges.forEach(function(college) {
       console.log(college.name, college.address,college.url,college.institution,college.type)
-      var symbol = college.type;
-      var layerID = 'TP' + symbol;
 
       //configurepopup
       var html = `
@@ -68,7 +65,7 @@ $.getJSON('./data/colleges.json', function(colleges) {
         if (college.institution == 'Public') {
           var el = document.createElement('div');
             el.className = 'marker';
-            el.id = 'TP:' + college.type;
+            el.id = college.type;
             el.style.backgroundImage ='url("images/tennis_marker.svg")';
             el.style.width = '16px';
             el.style.height = '22px';
@@ -99,22 +96,22 @@ $.getJSON('./data/colleges.json', function(colleges) {
 })
 
 
-document.getElementById('Bach').addEventListener('change', function(e) {
-  if (el.target.checked === false) {
-    $('*[id*=4-Year]').each(function() {
+document.getElementById("Bachelors").addEventListener('change', function(e) {
+  if (e.target.checked === false) {
+    $('*[id*=Bachelors]').each(function() {
       $(this).hide();});
   } else {
-    $('*[id*=4-Year]').each(function() {
+    $('*[id*=Bachelors]').each(function() {
       $(this).show();});
   }
 })
 
-document.getElementById("Assoc").addEventListener('change', function(e) {
-  if (el.target.checked === false) {
-    $('*[id*=2-Year]').each(function() {
+document.getElementById("Community").addEventListener('change', function(e) {
+  if (e.target.checked === false) {
+    $('*[id*=Community]').each(function() {
       $(this).hide();});
   } else {
-    $('*[id*=2-Year]').each(function() {
+    $('*[id*=Community]').each(function() {
       $(this).show();});
   }
 })
