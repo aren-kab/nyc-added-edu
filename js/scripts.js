@@ -66,9 +66,9 @@ $.getJSON('./data/colleges.json', function(colleges) {
           var el = document.createElement('div');
             el.className = 'marker';
             el.id = college.type;
-            el.style.backgroundImage ='url("images/tennis_marker.svg")';
-            el.style.width = '16px';
-            el.style.height = '22px';
+            el.style.backgroundImage ='url("images/public-icon.svg")';
+            el.style.width = '19.2px';
+            el.style.height = '26.4px';
 
         new mapboxgl.Marker(el,{
            anchor: "bottom",
@@ -81,9 +81,9 @@ $.getJSON('./data/colleges.json', function(colleges) {
             var el = document.createElement('div');
               el.className = 'marker';
               el.id = 'TP:' + college.type;
-              el.style.backgroundImage ='url("images/tennis_marker_yellow.svg")';
-              el.style.width = '16px';
-              el.style.height = '22px';
+              el.style.backgroundImage ='url("images/private-icon.svg")';
+              el.style.width = '19.2px';
+              el.style.height = '26.4px';
 
           new mapboxgl.Marker(el,{
              anchor: "bottom"

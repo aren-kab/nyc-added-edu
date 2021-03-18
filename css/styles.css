@@ -62,6 +62,35 @@ html, body, .container, .sidebar, #mapContainer {
   font-size: 17.5px;
 }
 
+
+.legend{
+  height: 150px;
+  width: 370px;
+  /* border: 3px inset; */
+}
+
+
+.legend  span {
+  border-radius: 20%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  height: 20px;
+  width: 300px;
+  margin-top:10px;
+  margin-left:20px;
+  margin-bottom:0px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+h3{
+  font-weight: bold;
+  text-align: center;
+}
+
 .filter-group {
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 600;
