@@ -24,13 +24,13 @@ map.addControl(new mapboxgl.NavigationControl())
 //initiate filter
 var filterGroup = document.getElementById('filter-group');
 
-
 //Filter by program type
 var years = ['Bachelors','Community','Graduate'];
 
 // Add checkbox and label elements for the layer.
 years.forEach(function(id) {
   var input = document.createElement('input');
+    input.className = 'active';
     input.type = 'checkbox';
     input.id = id;
     input.checked = true;
