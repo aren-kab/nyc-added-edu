@@ -24,7 +24,7 @@ map.addControl(new mapboxgl.NavigationControl())
 //initiate filter
 var filterGroup = document.getElementById('filter-group');
 
-//Filter by program type
+//Filter by college type
 var years = ['Bachelors','Community','Graduate'];
 
 // Add checkbox and label elements for the layer.
@@ -96,35 +96,37 @@ $.getJSON('./data/colleges.json', function(colleges) {
 })
 
 
-document.getElementById("Bachelors").addEventListener('change', function(e) {
-  if (e.target.checked === false) {
-    $('*[id*=Bachelors]').each(function() {
-      $(this).hide();});
-  } else {
-    $('*[id*=Bachelors]').each(function() {
-      $(this).show();});
-  }
-})
+  document.getElementById("Bachelors").addEventListener('change', function(e) {
+    if (e.target.checked === false) {
+      $('*[id*=Bachelors]').each(function() {
+        $(this).hide();});
+    } else {
+      $('*[id*=Bachelors]').each(function() {
+        $(this).show();});
+    }
+  })
 
-document.getElementById("Community").addEventListener('change', function(e) {
-  if (e.target.checked === false) {
-    $('*[id*=Community]').each(function() {
-      $(this).hide();});
-  } else {
-    $('*[id*=Community]').each(function() {
-      $(this).show();});
-  }
-})
+  document.getElementById("Community").addEventListener('change', function(e) {
+    if (e.target.checked === false) {
+      $('*[id*=Community]').each(function() {
+        $(this).hide();});
+    } else {
+      $('*[id*=Community]').each(function() {
+        $(this).show();});
+    }
+  })
 
-document.getElementById("Graduate").addEventListener('change', function(e) {
-  if (e.target.checked === false) {
-    $('*[id*=Graduate]').each(function() {
-      $(this).hide();});
-  } else {
-    $('*[id*=Graduate]').each(function() {
-      $(this).show();});
-  }
-})
+  document.getElementById("Graduate").addEventListener('change', function(e) {
+    if (e.target.checked === false) {
+      $('*[id*=Graduate]').each(function() {
+        $(this).prop('checked', false);
+      });
+    } else {
+      $('*[id*=Graduate]').each(function() {
+        $(this).prop('checked', true);
+      });
+    }
+  });
 
 
 // map.on('load', function () {
