@@ -43,6 +43,22 @@ years.forEach(function(id) {
   });
 
 // Filter by Programs
+var programs = ['Broad','Liberal-Arts','Arts','Niche','Health','Law'];
+
+// Add checkbox and label elements for the layer.
+programs.forEach(function(id) {
+  var input = document.createElement('input');
+    input.className = 'active';
+    input.type = 'checkbox';
+    input.id = id;
+    input.checked = true;
+    filterGroup.appendChild(input);
+
+  var label = document.createElement('label');
+    label.setAttribute('for', id);
+    label.textContent = id;
+    filterGroup.appendChild(label);
+  });
 
 //Let's add the college json
 $.getJSON('./data/colleges.json', function(colleges) {
@@ -62,13 +78,12 @@ $.getJSON('./data/colleges.json', function(colleges) {
             </div>
         `
     //color if public statement
-        if (college.institution == 'Public') {
-          var el = document.createElement('div');
-            el.className = 'marker';
-            el.id = college.type;
-            el.style.backgroundImage ='url("images/public-icon.svg")';
-            el.style.width = '19.2px';
-            el.style.height = '26.4px';
+      if (college.institution == 'Public') {
+       var el = document.createElement('div');
+         el.className = `marker marker-${college.type} marker-${college.Programs} `;
+         el.style.backgroundImage ='url("images/public-icon.svg")';
+         el.style.width = '19.2px';
+         el.style.height = '26.4px';
 
         new mapboxgl.Marker(el,{
            anchor: "bottom",
@@ -79,11 +94,10 @@ $.getJSON('./data/colleges.json', function(colleges) {
         }
         else{
             var el = document.createElement('div');
-              el.className = 'marker';
-              el.id = 'TP:' + college.type;
-              el.style.backgroundImage ='url("images/private-icon.svg")';
-              el.style.width = '19.2px';
-              el.style.height = '26.4px';
+            el.className = `marker marker-${college.type} marker-${college.Programs}`;
+            el.style.backgroundImage ='url("images/private-icon.svg")';
+            el.style.width = '19.2px';
+            el.style.height = '26.4px';
 
           new mapboxgl.Marker(el,{
              anchor: "bottom"
@@ -95,41 +109,124 @@ $.getJSON('./data/colleges.json', function(colleges) {
     });
 })
 
+//trigger show and hide by checkboxes Bachelors
+document.getElementById("Bachelors").addEventListener('change', function(e) {
+   if (e.target.checked === false) {
+     $('.marker-Bachelors').each(function() {
+       $(this).hide();
+     });
+   } else {
+     $('.marker-Bachelors').each(function() {
+       $(this).show();
+     });
+   }
+ })
 
-  document.getElementById("Bachelors").addEventListener('change', function(e) {
+ //trigger show and hide by checkboxes Community
+ document.getElementById("Community").addEventListener('change', function(e) {
     if (e.target.checked === false) {
-      $('*[id*=Bachelors]').each(function() {
-        $(this).hide();});
+      $('.marker-Community').each(function() {
+        $(this).hide();
+      });
     } else {
-      $('*[id*=Bachelors]').each(function() {
-        $(this).show();});
+      $('.marker-Community').each(function() {
+        $(this).show();
+      });
     }
   })
 
-  document.getElementById("Community").addEventListener('change', function(e) {
-    if (e.target.checked === false) {
-      $('*[id*=Community]').each(function() {
-        $(this).hide();});
-    } else {
-      $('*[id*=Community]').each(function() {
-        $(this).show();});
-    }
-  })
-
+  //trigger show and hide by checkboxes Graduate
   document.getElementById("Graduate").addEventListener('change', function(e) {
+     if (e.target.checked === false) {
+       $('.marker-Graduate').each(function() {
+         $(this).hide();
+       });
+     } else {
+       $('.marker-Graduate').each(function() {
+         $(this).show();
+       });
+     }
+   })
+
+ //trigger show and hide by checkboxes Bachelors
+ document.getElementById("Broad").addEventListener('change', function(e) {
     if (e.target.checked === false) {
-      $('*[id*=Graduate]').each(function() {
-        $(this).prop('checked', false);
+      $('.marker-Comprehensive').each(function() {
+        $(this).hide();
       });
     } else {
-      $('*[id*=Graduate]').each(function() {
-        $(this).prop('checked', true);
+      $('.marker-Comprehensive').each(function() {
+        $(this).show();
       });
     }
-  });
+  })
 
+  //trigger show and hide by checkboxes Community
+  document.getElementById("Liberal-Arts").addEventListener('change', function(e) {
+     if (e.target.checked === false) {
+       $('.marker-Liberal-Arts').each(function() {
+         $(this).hide();
+       });
+     } else {
+       $('.marker-Liberal-Arts').each(function() {
+         $(this).show();
+       });
+     }
+   })
 
-// map.on('load', function () {
+   //trigger show and hide by checkboxes Graduate
+   document.getElementById("Arts").addEventListener('change', function(e) {
+      if (e.target.checked === false) {
+        $('.marker-Arts').each(function() {
+          $(this).hide();
+        });
+      } else {
+        $('.marker-Arts').each(function() {
+          $(this).show();
+        });
+      }
+    })
+
+    //trigger show and hide by checkboxes Bachelors
+    document.getElementById("Niche").addEventListener('change', function(e) {
+       if (e.target.checked === false) {
+         $('.marker-Niche').each(function() {
+           $(this).hide();
+         });
+       } else {
+         $('.marker-Niche').each(function() {
+           $(this).show();
+         });
+       }
+     })
+
+     //trigger show and hide by checkboxes Community
+     document.getElementById("Health").addEventListener('change', function(e) {
+        if (e.target.checked === false) {
+          $('.marker-Health').each(function() {
+            $(this).hide();
+          });
+        } else {
+          $('.marker-Health').each(function() {
+            $(this).show();
+          });
+        }
+      })
+
+      //trigger show and hide by checkboxes Graduate
+      document.getElementById("Law").addEventListener('change', function(e) {
+         if (e.target.checked === false) {
+           $('.marker-Law').each(function() {
+             $(this).hide();
+           });
+         } else {
+           $('.marker-Law').each(function() {
+             $(this).show();
+           });
+         }
+       })
+
+// // map.on('load', function () {
 // // Add an image to use as a custom marker
 //   map.loadImage('https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
 //   function (error, image) {
