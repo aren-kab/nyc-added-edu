@@ -148,7 +148,7 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
      }
    })
 
- //trigger show and hide by checkboxes Bachelors
+ //trigger show and hide by checkboxes Broad
  document.getElementById("Broad").addEventListener('change', function(e) {
     if (e.target.checked === false) {
       $('.marker-Comprehensive').each(function() {
@@ -161,7 +161,7 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
     }
   })
 
-  //trigger show and hide by checkboxes Community
+  //trigger show and hide by checkboxes Liberal Arts
   document.getElementById("Liberal-Arts").addEventListener('change', function(e) {
      if (e.target.checked === false) {
        $('.marker-Liberal-Arts').each(function() {
@@ -174,57 +174,57 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
      }
    })
 
-   //trigger show and hide by checkboxes Graduate
-   document.getElementById("Arts").addEventListener('change', function(e) {
-      if (e.target.checked === false) {
-        $('.marker-Arts').each(function() {
-          $(this).hide();
-        });
-      } else {
-        $('.marker-Arts').each(function() {
-          $(this).show();
-        });
-      }
-    })
+   //trigger show and hide by checkboxes Arts
+ document.getElementById("Arts").addEventListener('change', function(e) {
+    if (e.target.checked === false) {
+      $('.marker-Arts').each(function() {
+        $(this).hide();
+      });
+    } else {
+      $('.marker-Arts').each(function() {
+        $(this).show();
+      });
+    }
+  })
 
-    //trigger show and hide by checkboxes Bachelors
-    document.getElementById("Niche").addEventListener('change', function(e) {
-       if (e.target.checked === false) {
-         $('.marker-Niche').each(function() {
-           $(this).hide();
-         });
-       } else {
-         $('.marker-Niche').each(function() {
-           $(this).show();
-         });
-       }
-     })
+    //trigger show and hide by checkboxes Niche
+  document.getElementById("Niche").addEventListener('change', function(e) {
+     if (e.target.checked === false) {
+       $('.marker-Niche').each(function() {
+         $(this).hide();
+       });
+     } else {
+       $('.marker-Niche').each(function() {
+         $(this).show();
+       });
+     }
+   })
 
-     //trigger show and hide by checkboxes Community
-     document.getElementById("Health").addEventListener('change', function(e) {
-        if (e.target.checked === false) {
-          $('.marker-Health').each(function() {
-            $(this).hide();
-          });
-        } else {
-          $('.marker-Health').each(function() {
-            $(this).show();
-          });
-        }
-      })
+     //trigger show and hide by checkboxes Health
+ document.getElementById("Health").addEventListener('change', function(e) {
+    if (e.target.checked === false) {
+      $('.marker-Health').each(function() {
+        $(this).hide();
+      });
+    } else {
+      $('.marker-Health').each(function() {
+        $(this).show();
+      });
+    }
+  })
 
-      //trigger show and hide by checkboxes Graduate
-      document.getElementById("Law").addEventListener('change', function(e) {
-         if (e.target.checked === false) {
-           $('.marker-Law').each(function() {
-             $(this).hide();
-           });
-         } else {
-           $('.marker-Law').each(function() {
-             $(this).show();
-           });
-         }
-       })
+      //trigger show and hide by checkboxes Law
+  document.getElementById("Law").addEventListener('change', function(e) {
+     if (e.target.checked === false) {
+       $('.marker-Law').each(function() {
+         $(this).hide();
+       });
+     } else {
+       $('.marker-Law').each(function() {
+         $(this).show();
+       });
+     }
+   })
 
 // // map.on('load', function () {
 // // Add an image to use as a custom marker

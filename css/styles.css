@@ -120,8 +120,41 @@ h3{
   margin-right: 5px;
 }
 
+
+
+
 #mapContainer {
   flex-grow: 1;
+}
+
+.legend{
+  position: absolute;
+  left: 450px;
+  top: 30px;
+  background-color: white;
+  height: 100px;
+  width: 190px;
+  border: 2px;
+  border-style:solid;
+  border-color: grey;
+  z-index:2;
+}
+
+.caption{
+  margin: 5px;
+  text-align:right;
+  padding-top: 8px;
+  font-weight:550;
+  display: inline-block
+}
+
+.icons{
+  height: 50px;
+  width:30px;
+  padding-left: 7px;
+  padding-bottom: 0px;
+  display:inline-block;
+  vertical-align:top;
 }
 
 .marker {
