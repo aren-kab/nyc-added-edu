@@ -12,6 +12,7 @@ html, body, .container, .sidebar, #mapContainer {
 .topnav {
   background-color: #d0ab8b;
   overflow: hidden;
+
 }
 
 /* style the nav bar  */
@@ -21,6 +22,7 @@ html, body, .container, .sidebar, #mapContainer {
   text-align: center;
   padding: 15px 16px;
   font-size: 18px;
+
 }
 
 .topnav .about{
@@ -46,7 +48,9 @@ html, body, .container, .sidebar, #mapContainer {
   display: flex;
   min-height: auto;
 }
-
+.sideimage{
+  repeat;
+}
 .sidebar{
   height: 100%;
   background: grey;
