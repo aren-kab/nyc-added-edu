@@ -8,6 +8,40 @@ html, body, .container, .sidebar, #mapContainer {
   overflow: hidden;
 }
 
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #d0ab8b;
+  overflow: hidden;
+}
+
+/* style the nav bar  */
+.topnav a {
+  float: left;
+  color: #42193d;
+  text-align: center;
+  padding: 15px 16px;
+  font-size: 18px;
+}
+
+.topnav .about{
+  margin-top: 4px;
+}
+
+/* add hover effect to about and sources */
+.topnav .about:hover {
+  background-color: #ddd;
+  cursor: pointer;
+  color: black;
+}
+
+/* Make title of map bigger and bold */
+.topnav .navtitle {
+  font-weight: bold;
+  font-size: 22px;
+  /* text-align: center; */
+  /* padding: 16px 16px; */
+  color: #42193d;
+}
 .container {
   display: flex;
   min-height: auto;
@@ -130,7 +164,7 @@ h3{
 .legend{
   position: absolute;
   left: 450px;
-  top: 30px;
+  top: 90px;
   background-color: white;
   height: 100px;
   width: 190px;
