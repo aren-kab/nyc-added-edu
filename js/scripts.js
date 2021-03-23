@@ -8,7 +8,7 @@ var map = new mapboxgl.Map({
 });
 
 // disable map zoom when using scroll
-map.scrollZoom.disable();
+// map.scrollZoom.disable();
 
 var geocoder = new MapboxGeocoder({ // Initialize the geocoder
   accessToken: mapboxgl.accessToken, // Set the access token
