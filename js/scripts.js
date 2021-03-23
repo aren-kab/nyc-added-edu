@@ -225,35 +225,25 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
      }
    })
 
-
-//try approach similar to above - doesn't work at all
-  // $('.reset').getElementsByClassName('active').click.addEventListener('change',function(e) {
-  //   if (e.target.checked=== false){
-  //     $('active').each(function(){
-  //       $(e.target.checked===true)
-  //     });
-  //   }
-  // })
-
-// code checks boxes but does not change markers
+// code checks boxes for filters when clicking reset
    $('.reset').click(function(e) {
      if(e.target.checked==false) {
-         // // Iterate each checkbox
-         // $('active').each(function() {
-         //     this.checked = true
-         //       $('marker').each(function(){
-         //        $(this).show()
-         //      });
-             // })
      } else {
          $('.active').each(function() {
              this.checked = true
              $('marker').each(function(){
               $(this).show()
-            })
-         });
-     }
- });
+          })
+        });
+      }
+    });
+
+//show all markers on reset click
+  $('.reset').click(function(e) {
+    $('.marker').each(function() {
+      $(this).show();
+    });
+  })
 
 ///doesn't work
  // document.getElementById('marker').click.addEventListener('change', function(e){
