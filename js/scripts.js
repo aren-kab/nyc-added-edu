@@ -65,16 +65,15 @@ $.getJSON('./data/colleges.json', function(colleges) {
     console.log(colleges)
 
     colleges.forEach(function(college) {
-      console.log(college.name, college.address,college.url,college.institution,college.type)
+      console.log(college.name, college.address,college.url,college.institution,college.type,college.url)
 
       //configurepopup
       var html = `
             <div>
-              <h3>${college.name}</h3>
+              <h3> <a style = "color: black;" href = ${college.url}>${college.name}</a></h3>
               <div><strong>Location:</strong> ${college.address}, ${college.zip}</div>
               <div><strong>Type:</strong> ${college.type}</div>
               <div><strong>Programs:</strong> ${college.Programs}</div>
-              <div><a src ='${college.url}'></a></div>
             </div>
         `
     //color if public statement
