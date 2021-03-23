@@ -225,16 +225,40 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
      }
    })
 
-   $('.reset').click(function(event) {
-     if(this.checked) {
-         // Iterate each checkbox
-         $(':checkbox').each(function() {
-             this.checked = false;
-               $(this).show();
-             })
+
+//try approach similar to above - doesn't work at all
+  // $('.reset').getElementsByClassName('active').click.addEventListener('change',function(e) {
+  //   if (e.target.checked=== false){
+  //     $('active').each(function(){
+  //       $(e.target.checked===true)
+  //     });
+  //   }
+  // })
+
+// code checks boxes but does not change markers
+   $('.reset').click(function(e) {
+     if(e.target.checked==false) {
+         // // Iterate each checkbox
+         // $('active').each(function() {
+         //     this.checked = true
+         //       $('marker').each(function(){
+         //        $(this).show()
+         //      });
+             // })
      } else {
-         $(':checkbox').each(function() {
-             this.checked = true;
+         $('.active').each(function() {
+             this.checked = true
+             $('marker').each(function(){
+              $(this).show()
+            })
          });
      }
  });
+
+///doesn't work
+ // document.getElementById('marker').click.addEventListener('change', function(e){
+ //   $(e.target.checked === true)
+ //   $('.marker').each(function(){
+ //     $(this).show();
+ //   })
+ // })
