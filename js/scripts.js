@@ -224,3 +224,17 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
        });
      }
    })
+
+   $('.reset').click(function(event) {
+     if(this.checked) {
+         // Iterate each checkbox
+         $(':checkbox').each(function() {
+             this.checked = false;
+               $(this).show();
+             })
+     } else {
+         $(':checkbox').each(function() {
+             this.checked = true;
+         });
+     }
+ });
