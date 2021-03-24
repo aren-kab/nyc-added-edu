@@ -1,5 +1,5 @@
 *{
-  font-family: sans-serif;
+  font-family: sans-serif, Helvetica;
 }
 html, body, .container, .sidebar, #mapContainer {
   height: 100%;
@@ -99,11 +99,28 @@ html, body, .container, .sidebar, #mapContainer {
   font-size: 17.5px;
 }
 
-
-h3{
+/* style popups here */
+.popuptitle{
   font-weight: bold;
   text-align: center;
+  color: black;
+  font-size:14px;
 }
+
+.mapboxgl-popup-content{
+  border-radius: 10px;
+  background-color:#F2E3C9;
+  font-size: 13px;
+  box-shadow: 3px 2px 15px 3px rgba(137,137,137,0.5);
+
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip{
+  border-top-color:#F2E3C9;
+  border-bottom-color:#F2E3C9;
+}
+
+/* end of popup styling */
 
 /* set button styling */
 .reset{
@@ -196,8 +213,10 @@ h3{
   margin: 5px;
   text-align:right;
   padding-top: 8px;
-  font-weight:550;
-  display: inline-block
+  font-weight:bold;
+  display: inline-block;
+  font-family: 'Secular One';
+  font-size: 17px;
 }
 
 .icons{

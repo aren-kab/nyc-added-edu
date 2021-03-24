@@ -67,41 +67,45 @@ $.getJSON('./data/colleges.json', function(colleges) {
     colleges.forEach(function(college) {
       console.log(college.name, college.address,college.url,college.institution,college.type,college.url)
 
-      //configurepopup
+      //configurepopup use classes for css
       var html = `
             <div>
-              <h3> <a style = "color: black;" href = ${college.url}>${college.name}</a></h3>
-              <div><strong>Location:</strong> ${college.address}, ${college.zip}</div>
+              <h3 class = "popuptitle"> <a href = ${college.url} class = "popuptitle">${college.name}</a></h3>
+              <div><strong>Address:</strong> ${college.address}, ${college.zip} </div>
               <div><strong>Type:</strong> ${college.type}</div>
               <div><strong>Programs:</strong> ${college.Programs}</div>
             </div>
         `
-    //color if public statement
+    //color if public statement use classes for future filters
       if (college.institution == 'Public') {
        var el = document.createElement('div');
          el.className = `marker marker-${college.type} marker-${college.Programs} `;
          el.style.backgroundImage ='url("images/public-icon.svg")';
          el.style.width = '19.2px';
          el.style.height = '26.4px';
-
+        //setmarker w/ anchor so they stay in place
         new mapboxgl.Marker(el,{
            anchor: "bottom",
           })
-          .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-42] }).setHTML(html)) // add popup
+          ///set popup,use offset so that they appear uniformly
+          .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-28]}).setHTML(html)) // add popup
           .setLngLat([college.lon, college.lat])
           .addTo(map);
         }
+        //color if private statement use classes for future filters
         else{
             var el = document.createElement('div');
             el.className = `marker marker-${college.type} marker-${college.Programs}`;
             el.style.backgroundImage ='url("images/private-icon.svg")';
             el.style.width = '19.2px';
             el.style.height = '26.4px';
+            //setmarker w/ anchor so they stay in place
 
           new mapboxgl.Marker(el,{
              anchor: "bottom"
             })
-          .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-42] }).setHTML(html)) // add popup
+            ///set popup,use offset so that they appear uniformly
+          .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-28] }).setHTML(html)) // add popup
           .setLngLat([college.lon, college.lat])
           .addTo(map);
           }
@@ -244,11 +248,3 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
       $(this).show();
     });
   })
-
-///doesn't work
- // document.getElementById('marker').click.addEventListener('change', function(e){
- //   $(e.target.checked === true)
- //   $('.marker').each(function(){
- //     $(this).show();
- //   })
- // })
