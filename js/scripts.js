@@ -70,7 +70,7 @@ $.getJSON('./data/colleges.json', function(colleges) {
       //configurepopup use classes for css
       var html = `
             <div>
-              <h3 class = "popuptitle"> <a href = ${college.url} class = "popuptitle">${college.name}</a></h3>
+              <h3 class = "popuptitle"> <a href = ${college.url} target="_blank" rel="noopener noreferrer" class = "popuptitle">${college.name}</a></h3>
               <div><strong>Address:</strong> ${college.address}, ${college.zip} </div>
               <div><strong>Type:</strong> ${college.type}</div>
               <div><strong>Programs:</strong> ${college.Programs}</div>
