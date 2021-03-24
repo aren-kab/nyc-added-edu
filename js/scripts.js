@@ -251,13 +251,13 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
 
   var modal = document.getElementById("myModal");
 
-  // Get the button that opens the modal
+  // Get about as element  to open the modal
   var btn = document.getElementById("about");
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on the button, open the modal
+  // When the user clicks on about, open the modal
   btn.onclick = function() {
     modal.style.display = "block";
   }
