@@ -11,12 +11,29 @@
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6fa4d4a2eb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3> Higher Education is a big part of New York City!</h3>
+        <p>With over 140,000 degrees awarded in New York City in 2017 it is clear that universities and colleges have a large footprint in NYC.
+        We hope to make your search for a college easier through this map with filtering options and a public/private flag. </p>
+      <h4> Filter Explanations </h4>
+        <p> <strong>Type:</strong> This is the Institutions <em>Primary</em> Awarded Degree Type by education level. Ex: There are many colleges that offer graduate & associate
+          degrees but if they primarily offer Bachelors degrees they will fall under Bachelors.</p>
+          <p> <strong>Program Category:</strong> This filter is designed to help you find colleges based on your subject of interest. Broad institutions offers a variety of topics. The Niche
+          category has institutions that have a specialty that don't fit into any other category. </p>
+    </div>
+  </div>
   <div class="topnav">
     <a class="navtitle">NYC College and University Map</a>
-    <a class="navsub">About</a>
+    <a class="navsub" id ="about">About
+      <i class="fas fa-info-circle"></i>
+    </a>
     <a class = "navsub">Sources</a>
   </div>
   <div class='container'>
@@ -26,11 +43,11 @@
         <div class = "textbox">
           <div class = "content">
             <h2 class = "heading">
-             NYC Colleges
+             Find a College for you!
             </h2>
             <p class = "body1">
               This map contains points of all of the colleges in New York City.
-              We set out to provide more details about the higher ed landscape so please explore and enjoy!
+              Click on each point to see more information on the college & click on its name to go to the website!
             </p>
             <p class = "body2">
             <br> Use the filter options to toggle between different characteristics of institutions.
