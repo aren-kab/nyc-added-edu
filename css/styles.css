@@ -127,17 +127,30 @@ html, body, .container, .sidebar, #mapContainer {
   text-align: center;
   font-size: 28px;
 }
-
+/* subhead1 */
 .body1{
   text-align: center;
   font-size: 18.5px;
 }
-
+/* subhead2 */
 .body2{
   text-align: center;
   font-size: 17.5px;
 }
 
+/* sources location */
+.sources_sidebar{
+  margin-top: 150px
+}
+
+.sources_title{
+  text-align: left;
+  margin-bottom: -5px
+}
+
+.sources{
+  font-size: 12.1px;
+}
 /* style popups here */
 .popuptitle{
   font-weight: bold;
@@ -148,14 +161,14 @@ html, body, .container, .sidebar, #mapContainer {
 
 .mapboxgl-popup-content{
   border-radius: 10px;
-  background-color:#F2E3C9;
+  background-color:#DABFA7;
   font-size: 13px;
   box-shadow: 3px 2px 15px 3px rgba(137,137,137,0.5);
 
 }
 
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip{
-  border-top-color:#F2E3C9;
+  border-top-color:#DABFA7;
   border-bottom-color:#F2E3C9;
 }
 
