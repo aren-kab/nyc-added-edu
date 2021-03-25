@@ -273,6 +273,8 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
       modal.style.display = "none";
     }
   }
+
+  //show modal on load
   $( document).ready(function() {
     $('#myModal').show();
     // Handler for .load() called.
