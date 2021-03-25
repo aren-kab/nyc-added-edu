@@ -10,7 +10,7 @@ html, body, .container, .sidebar, #mapContainer {
 
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
+  position: fixed; /* Stay in place*/
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
@@ -24,12 +24,15 @@ html, body, .container, .sidebar, #mapContainer {
 .modal-content {
   background-color: #fefefe;
   border-radius: 10px;
-  margin: 20% 30%; /* 15% from the top and centered */
+  margin: 5% 5%; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
-  min-width: 20%;
   height: auto; /* Could be more or less, depending on screen size */
+  position: absolute;
+  top: 50%; /* Center the modal */
+  left: 50%; /* Center the modal */
+  transform: translate(-50%, -50%); /* Center the modal */
 }
 
 /* The Close Button */
@@ -94,6 +97,9 @@ html, body, .container, .sidebar, #mapContainer {
   background: grey;
   width: 425px;
   position: relative;
+  overflow-y: scroll;
+  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box;
 }
 
 .box1 {
@@ -181,7 +187,7 @@ html, body, .container, .sidebar, #mapContainer {
   font-weight: bolder;
   width: 100px;
   position: relative;
-  background-color: #80A4ED;
+  background-color: #DDF2EB;
   display: block;
   cursor: pointer;
   padding: 10px;
@@ -219,7 +225,7 @@ html, body, .container, .sidebar, #mapContainer {
 }
 
 .filter-group input[type='checkbox'] + label {
-  background-color: #087F8C;
+  background-color: #4b5153;
   display: block;
   cursor: pointer;
   padding: 10px;
@@ -227,14 +233,14 @@ html, body, .container, .sidebar, #mapContainer {
 }
 
 .filter-group input[type='checkbox'] + label {
-  background-color: #42193d;
+  background-color: #4b5153;
   text-transform: capitalize;
   border: 1px solid rgba(0, 0, 0, 0.25);
   }
 
 .filter-group input[type='checkbox'] + label:hover,
 .filter-group input[type='checkbox']:checked + label {
-  background-color: #351431;
+  background-color: #373E40;
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
@@ -252,8 +258,8 @@ html, body, .container, .sidebar, #mapContainer {
   left: 450px;
   top: 90px;
   background-color: white;
-  height: 100px;
-  width: 190px;
+  height: 80px;
+  width: 155px;
   border: 2px;
   border-style:solid;
   border-color: grey;
@@ -267,12 +273,12 @@ html, body, .container, .sidebar, #mapContainer {
   padding-top: 8px;
   font-weight:bold;
   display: inline-block;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .icons{
-  height: 50px;
-  width:30px;
+  height: 40px;
+  width:20px;
   padding-left: 7px;
   padding-bottom: 0px;
   display:inline-block;
