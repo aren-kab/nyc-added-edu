@@ -19,7 +19,7 @@ var geocoder = new MapboxGeocoder({ // Initialize the geocoder
 // Add the geocoder to the map
 map.addControl(geocoder);
 //add nav control
-map.addControl(new mapboxgl.NavigationControl())
+map.addControl(new mapboxgl.NavigationControl());
 
 //initiate filter
 var filterGroup = document.getElementById('filter-group');
@@ -105,7 +105,7 @@ $.getJSON('./data/colleges.json', function(colleges) {
              anchor: "bottom"
             })
             ///set popup,use offset so that they appear uniformly
-          .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-28] }).setHTML(html)) // add popup
+          .setPopup(new mapboxgl.Popup({anchor: 'bottom', offset:[0,-28]}).setHTML(html)) // add popup
           .setLngLat([college.lon, college.lat])
           .addTo(map);
           }
@@ -273,3 +273,7 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
       modal.style.display = "none";
     }
   }
+  $( document).ready(function() {
+    $('#myModal').show();
+    // Handler for .load() called.
+  });
