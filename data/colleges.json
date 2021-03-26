@@ -154,7 +154,7 @@
     "address": "500 GRAND CONCOURSE",
     "bin": 2001019,
     "institution": "Public",
-    "type": "Community",
+    "type": "Associate",
     "lon": -73.92693175,
     "lat": 40.81782605,
     "Programs": "Comprehensive"
@@ -170,7 +170,7 @@
     "address": "80 WEST 181 STREET",
     "bin": 2014573,
     "institution": "Public",
-    "type": "Community",
+    "type": "Associate",
     "lon": -73.9088325,
     "lat": 40.85681411,
     "Programs": "Comprehensive"
@@ -282,7 +282,7 @@
     "address": "199 CHAMBERS STREET",
     "bin": 1066406,
     "institution": "Public",
-    "type": "Community",
+    "type": "Associate",
     "lon": -74.01183076,
     "lat": 40.71865472,
     "Programs": "Comprehensive"
@@ -378,7 +378,7 @@
     "address": "222-05 56 AVENUE",
     "bin": 4444187,
     "institution": "Public",
-    "type": "Community",
+    "type": "Associate",
     "lon": -73.75759791,
     "lat": 40.75383842,
     "Programs": "Comprehensive"
@@ -394,7 +394,7 @@
     "address": "31-10 THOMSON AVENUE",
     "bin": 4003534,
     "institution": "Public",
-    "type": "Community",
+    "type": "Associate",
     "lon": -73.93512379,
     "lat": 40.74399569,
     "Programs": "Comprehensive"
@@ -986,7 +986,7 @@
     "address": "450 WEST 56 STREET",
     "bin": 1026841,
     "institution": "Private",
-    "type": "Community",
+    "type": "Associate",
     "lon": -73.98864639,
     "lat": 40.76787351,
     "Programs": "Niche"

@@ -25,7 +25,7 @@ map.addControl(new mapboxgl.NavigationControl());
 var filterGroup = document.getElementById('filter-group');
 
 //Filter by college type
-var years = ['Bachelors','Community','Graduate'];
+var years = ['Associate','Bachelors','Graduate'];
 
 // Add checkbox and label elements for the layer.
 years.forEach(function(id) {
@@ -126,13 +126,13 @@ document.getElementById("Bachelors").addEventListener('change', function(e) {
  })
 
  //trigger show and hide by checkboxes Community
- document.getElementById("Community").addEventListener('change', function(e) {
+ document.getElementById("Associate").addEventListener('change', function(e) {
     if (e.target.checked === false) {
-      $('.marker-Community').each(function() {
+      $('.marker-Associate').each(function() {
         $(this).hide();
       });
     } else {
-      $('.marker-Community').each(function() {
+      $('.marker-Associate').each(function() {
         $(this).show();
       });
     }
