@@ -3,8 +3,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYXJlbi1rYWIiLCJhIjoiY2tsMTJhejk3MHhxazJxcW5sb
 var map = new mapboxgl.Map({
   container: 'mapContainer', // container ID
   style: 'mapbox://styles/mapbox/light-v10', // style URL
-  center: [-73.984771, 40.727157], // starting position [lng, lat]
-  zoom: 11 // starting zoom
+  center: [-73.924771, 40.727157], // starting position [lng, lat]
+  zoom: 11,
+   // starting zoom
 });
 
 // disable map zoom when using scroll
@@ -20,6 +21,9 @@ var geocoder = new MapboxGeocoder({ // Initialize the geocoder
 map.addControl(geocoder);
 //add nav control
 map.addControl(new mapboxgl.NavigationControl());
+// add attribution because it's not visible anymore
+map.addControl(new mapboxgl.AttributionControl(),['top-left']);
+
 
 //initiate filter
 var filterGroup = document.getElementById('filter-group');
